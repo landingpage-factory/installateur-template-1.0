@@ -106,5 +106,5 @@ License: https://github.com/landingpage-factory/installateur-template-1.0/blob/m
 ---
 
 Viel Spaß mit dem Template! 🎉
-```
+
 
