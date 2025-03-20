@@ -1,0 +1,105 @@
+/* components/AboutTimeline.module.css */
+.timelineContainer {
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .timelineLine {
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    background: var(--accent-color);
+    top: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    opacity: 0.3;
+  }
+  
+  .timelineItem {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.8s ease;
+  }
+  
+  .timelineItem.visible {
+    opacity: 1;
+  }
+  
+  .timelineItem.left {
+    padding-right: 50%;
+    transform: translateX(-100px);
+  }
+  
+  .timelineItem.right {
+    padding-left: 50%;
+    transform: translateX(100px);
+  }
+  
+  .timelineItem.visible.left,
+  .timelineItem.visible.right {
+    transform: translateX(0);
+  }
+  
+  .timelineContent {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .yearMarker {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--bg-color);
+  }
+  
+  .left .yearMarker {
+    right: -140px;
+  }
+  
+  .right .yearMarker {
+    left: -140px;
+  }
+  
+  .card {
+    background: rgba(3, 7, 18, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(186, 232, 58, 0.2);
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .timelineLine {
+      left: 20px;
+    }
+    
+    .timelineItem.left,
+    .timelineItem.right {
+      padding: 0 0 0 70px;
+      transform: none;
+    }
+    
+    .yearMarker {
+      left: -50px !important;
+      right: auto !important;
+      width: 60px;
+      height: 60px;
+      font-size: 1rem;
+    }
+  }
