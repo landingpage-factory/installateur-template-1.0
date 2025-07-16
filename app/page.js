@@ -21,7 +21,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-6 md:mt-8 flex flex-wrap gap-3" data-aos="fade-up-right">
-            <a href="/kontakt" className="custom-btn text-base md:text-lg">
+            <a href="/contact" className="custom-btn text-base md:text-lg">
               Termin vereinbaren
             </a>
 
